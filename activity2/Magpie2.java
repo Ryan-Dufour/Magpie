@@ -44,13 +44,9 @@ public class Magpie2
         {
             response = "Tell me more about your family.";
         }
-        else 
+        else if  (statement.indexOf("Mr.Jaffe") >= 0)
         {
-            response = getRandomResponse();
-        }
-        if (statement.indexOf("Mr.Jaffe") >= 0)
-        {
-            response = "He sounds like an excellent teacher!";
+            response =  "He sounds like an excellent teacher!";
         }
         else if (statement.indexOf("dog") >= 0
                 || statement.indexOf("cat") >= 0)
@@ -58,11 +54,7 @@ public class Magpie2
         {
             response = "Tell me more about your pets";
         }
-        else 
-        {
-            response = getRandomResponse();
-        }
-        if (statement.indexOf("Taco bell") >= 0)
+        else if (statement.indexOf("Taco bell") >= 0)
         {
             response = "I prefer Rubios";
         }
@@ -71,16 +63,18 @@ public class Magpie2
                 
         {
             response = "Sorry in Magpie Trains and Bears are the same word.";
-        }
+        } 
         else 
+
         {
+    
             response = getRandomResponse();
         }
-
-
-    
+        
         return response;
-    }
+        
+    } 
+
 
     /**
      * Pick a default response to use if nothing else fits.
