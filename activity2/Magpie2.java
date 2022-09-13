@@ -64,6 +64,13 @@ public class Magpie2
         {
             response = "Sorry in Magpie Trains and Bears are the same word.";
         } 
+        else if (statement.indexOf("Mother") >= (statement.indexOf("cats")))
+        {
+          response = "Tell me more about your family.";
+            
+        }
+
+    
         else 
 
         {
