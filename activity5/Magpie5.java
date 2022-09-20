@@ -40,22 +40,21 @@ public class Magpie5
             response = "Say something, please.";
         }
 
-        else if (findKeyword(statement, "no") >= 0)
+        else if (findKeyword(statement, "What's your name?") >= 0)
         {
-            response = "Why so negative?";
+            response = "Ruth Bader Ginsburg?";
         }
-        else if (findKeyword(statement, "mother") >= 0
-                || findKeyword(statement, "father") >= 0
-                || findKeyword(statement, "sister") >= 0
-                || findKeyword(statement, "brother") >= 0)
+        else if (findKeyword(statement, "Are you married?") >= 0
+            
+         || findKeyword(statement, "Were you married") >= 0)
         {
-            response = "Tell me more about your family.";
+            response = "Yes, My husband's name was Martin Ginsburg.";
         }
 
         // Responses which require transformations
-        else if (findKeyword(statement, "I want to", 0) >= 0)
+        else if (findKeyword(statement, "Do you have any children?", 0) >= 0)
         {
-            response = transformIWantToStatement(statement);
+            response = "Yes I have two kids, their names are Jane and James.";
         }
         //  Part of student solution
         else if (findKeyword(statement, "I want", 0) >= 0)
