@@ -40,29 +40,42 @@ public class Magpie5
             response = "Say something, please.";
         }
 
-        else if (findKeyword(statement, "What's your name?") >= 0)
+        else if (findKeyword(statement, "name") >= 0)
         {
-            response = "Ruth Bader Ginsburg?";
+            response = "Ruth Bader Ginsburg";
         }
-        else if (findKeyword(statement, "Are you married?") >= 0
+        else if (findKeyword(statement, "married") >= 0
             
-         || findKeyword(statement, "Were you married") >= 0)
+         || findKeyword(statement, "husband") >= 0)
         {
             response = "Yes, My husband's name was Martin Ginsburg.";
         }
 
         // Responses which require transformations
-        else if (findKeyword(statement, "Do you have any children?", 0) >= 0)
+        else if (findKeyword(statement, "children", 0) >= 0)
         {
             response = "Yes I have two kids, their names are Jane and James.";
         }
         //  Part of student solution
-        else if (findKeyword(statement, "I want", 0) >= 0)
+        else if (findKeyword(statement, "famous", 0) >= 0)
         {
-            response = transformIWantStatement(statement);
+            response = "Being a supreme court judge and women's rights icon";
         }
+        
+        else if (findKeyword(statement, "born", 0) >= 0)
+        {
+            response = "I was born in Brooklyn,New York in the USA.”";
+        }
+        else if (findKeyword(statement, "live", 0) >= 0)
+        {
+            response = "I lived in Washington D.C.”";
+        }
+            
+    
+    
 
-        else
+
+        else 
         {
 
             // Look for a two word (you <something> me)
